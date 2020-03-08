@@ -145,17 +145,6 @@ textarea::-webkit-input-placeholder {
     margin-right: 11px;
 }
 
-
-/* .contact-info__location::before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 10px;
-    background-image: url(assets/images/quote/location.png);
-    background-repeat: no-repeat;
-} */
-
 .contact-info__phone {
     font-size: 1.2em;
     line-height: 22.5px;
@@ -166,15 +155,6 @@ textarea::-webkit-input-placeholder {
 .contact-info__phone img {
     margin-right: 11px;
 }
-/* .contact-info__phone::before {
-    content: "";
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    margin-right: 12px;
-    background-image: url(assets/images/quote/phone.png);
-    background-repeat: no-repeat;
-} */
 
 .contact-info__email {
     font-size: 1.2em;
@@ -186,17 +166,6 @@ textarea::-webkit-input-placeholder {
 .contact-info__email img {
     margin-right: 9px;
 }
-
-/* .contact-info__email::before {
-    content: "";
-    display: inline-block;
-    width: 14px;
-    height: 8px;
-    margin-right: 8px;
-    background-image: url(assets/images/quote/mail.png);
-    background-repeat: no-repeat;
-} */
-
 
 .footer {
     background-color: #2d303a;

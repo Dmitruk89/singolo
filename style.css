@@ -101,14 +101,187 @@ body {
     color: #f06c64;
 }
 
+/* slyder */
+
 .slider {
+    position: relative;
     display: flex;
+    align-items: center;
     background-color: #f06c64;
-    min-height: 600px;
+    height: 600px;
     border-bottom: 6px solid #ea676b;
 }
 
-.phone-vertical {
+.slider__arrow {
+    position: absolute;
+    z-index: 5;
+    height: 50px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrow_back {
+    left: 30px;
+    background-image: url(assets/images/slider/arrow-back.png);
+}
+
+.arrow_forward {
+    right: 30px;
+    background-image: url(assets/images/slider/arrow-forward.png);
+}
+
+.slider__arrow:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.slides {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.slide-1 {
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.slide-2 {
+    background-image: url(assets/images/Slider2.png);
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-2 .phone_vertical {
+    left: 390px;
+    top: 2px;
+    transform: scale(1.065);
+}
+
+.slide-2 .phone_vertical .phone__screen {
+    background-image: url(assets/images/slider/slide-2-vertical-screen.png);
+}
+
+.phones {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 483px;
+    width: 796px;
+    margin: 0 auto;
+}
+
+.phone_vertical {
+    position: relative;
+    height: 483px;
+    width: 240px;
+}
+.phone_vertical .phone__body {
+    position: absolute;
+    z-index: 2;
+    background-image: url(assets/images/slider/phone-body-vertical.png);
+    background-repeat: no-repeat;
+    height: 458px;
+    width: 216px;
+    
+}
+.phone_vertical .phone__shadow {
+    position: absolute;
+    height: 483px;
+    width: 240px;
+    background-image: url(assets/images/slider/phone-shadow--vertical.png);
+    background-repeat: no-repeat;
+}
+.phone_vertical .phone__screen {
+    position: absolute;
+    left: 14px;
+    top: 65px;
+    z-index: 5;
+    background-image: url(assets/images/slider/screen-image-vertical.png);
+    background-repeat: no-repeat;
+    height: 333px;
+    width: 188px;
+}
+
+.phone_vertical .phone__btn {
+    bottom: 35px;
+    left: 88px;
+}
+
+.phone__btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.phone_horizontal .phone__btn {
+    bottom: 112px;
+    left: 9px;
+}
+
+.phone_horizontal {
+    position: relative;
+    width: 483px;
+    height: 240px;
+}
+
+.phone_horizontal .phone__body{
+    position: absolute;
+    z-index: 2;
+    background-image: url(assets/images/slider/phone-body-horizontal.png);
+    background-repeat: no-repeat;
+    width: 458px;
+    height: 216px;
+}
+
+.phone_horizontal .phone__shadow {
+    position: absolute;
+    height: 240px;
+    width: 483px;
+    background-image: url(assets/images/slider/phone-shadow-horizontal.png);
+    background-repeat: no-repeat;
+}
+
+.phone_horizontal .phone__screen {
+    position: absolute;
+    left: 60px;
+    top: 14px;
+    z-index: 5;
+    background-image: url(assets/images/slider/screen-image-horizontal.png);
+    background-repeat: no-repeat;
+    width: 333px;
+    height: 188px;
+}
+
+/* .phone-vertical {
     margin-left: 54px;
     margin-top: 53px;
 }
@@ -136,7 +309,7 @@ body {
 .slider__arrow-forward img:hover {
     cursor: pointer;
     opacity: 0.6;
-}
+} */
 
 .services {
     min-height: 500px;
@@ -245,8 +418,20 @@ body {
 }
 
 .gallery__item {
+    
     height: 190px;
     width: 220px;
+}
+
+.gallery__item:hover {
+    cursor: pointer;
+}
+
+.gallery__item .selected {
+    box-sizing: border-box;
+    height: 190px;
+    width: 220px;
+    border: solid 5px #F06C64;
 }
 
 .gallery__item:nth-child(n+13) {

@@ -22,6 +22,59 @@ function activeOnScroll(event){
 
 // slider
 
+let slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let isEnabled = true;
+
+function changeCurrentSlide(n) {
+    currentSlide = (n + slides.length) % slides.length;
+    console.log(currentSlide);
+}
+
+function hideSlide(direction) {
+    isEnabled = false;
+    slides[currentSlide].classList.add(direction);
+    slides[currentSlide].addEventListener('animationend', function(){
+        this.classList.remove('active', direction);
+    })
+}
+
+function showSlide(direction) {
+    
+    slides[currentSlide].classList.add('next', direction);
+    slides[currentSlide].addEventListener('animationend', function(){
+        this.classList.remove('next', direction);
+        this.classList.add('active');
+        isEnabled = true;
+    })
+}
+
+
+
+function previousSlide(n) {
+    hideSlide('to-right');
+    changeCurrentSlide(n - 1);
+    showSlide('from-left');
+}
+
+function nextSlide(n) {
+    hideSlide('to-left');
+    changeCurrentSlide(n + 1);
+    showSlide('from-right');
+}
+
+document.querySelector('.slider__arrow.arrow_left').addEventListener('click', function(){
+    if (isEnabled){
+        previousSlide(currentSlide);
+    }
+});
+
+document.querySelector('.slider__arrow.arrow_right').addEventListener('click', function(){
+    if (isEnabled){
+        nextSlide(currentSlide);
+    }
+});
+
 document.querySelectorAll(".phone__btn").forEach( element => {
     element.addEventListener('click', () => {
         let phoneScreen = element.parentElement.querySelector('.phone__screen');
@@ -61,6 +114,12 @@ function tabSelection(event) {
 
     event.target.classList.add('tab_selected');
     
+    let gallery = document.querySelector('.portfolio__gallery');
+    let pictures = document.querySelectorAll('.gallery__item');
+
+    for (let i = pictures.length - 2; i >= 0; i--){
+        gallery.appendChild(pictures[i]);
+    }
 }
 
 // get a quote
@@ -69,6 +128,7 @@ document.getElementById('modal-btn').addEventListener('click', hideModalWindow);
 
 function hideModalWindow(event){
     document.querySelector('.modal').style.display = 'none';
+    document.querySelector('.get-a-quote__form').reset();
 }
 
 document.querySelector('.get-a-quote__form').addEventListener('submit', submitForm);

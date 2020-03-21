@@ -115,19 +115,19 @@ html, body {
 
 .slider__arrow {
     position: absolute;
-    z-index: 5;
+    z-index: 10;
     height: 50px;
     width: 40px;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.arrow_back {
+.arrow_left {
     left: 30px;
     background-image: url(assets/images/slider/arrow-back.png);
 }
 
-.arrow_forward {
+.arrow_right {
     right: 30px;
     background-image: url(assets/images/slider/arrow-forward.png);
 }
@@ -146,35 +146,28 @@ html, body {
 }
 
 .slide {
-    position: absolute;
-    display: flex;
+    position: relative;
+    display: none;
     align-items: center;
     width: 100%;
     height: 100%;
+    animation: 0.5s ease-in;
+}
+
+.slide.active,
+.slide.next {
+    display: flex;
 }
 
 
 .slide-1 {
-    position: absolute;
-    left: 0;
-    display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
-}
-
-.hidden {
-    display: none;
 }
 
 .slide-2 {
     background-image: url(assets/images/Slider2.png);
-    position: absolute;
-    left: 0;
-    display: flex;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    
 }
 
 .slide-2 .phone_vertical {
@@ -281,6 +274,44 @@ html, body {
     width: 333px;
     height: 188px;
 }
+
+.to-left {
+    animation-name: left;
+}
+
+.to-right {
+    animation-name: right;
+    animation-direction: reverse;
+}
+
+.from-left {
+    animation-name: left;
+    animation-direction: reverse;
+}
+
+.from-right {
+    animation-name: right;
+}
+
+@keyframes left {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes right {
+    from {
+        left: 100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+/* services */
 
 .services {
     min-height: 500px;
@@ -617,7 +648,6 @@ textarea::-webkit-input-placeholder {
     width: 400px;
     height: 300px;
     background-color: #f2f2f2;
-    box-shadow: 10px 10px 30px black;
     border-radius: 0.5rem;
     z-index: 30;
   }
@@ -628,10 +658,10 @@ textarea::-webkit-input-placeholder {
     overflow: auto;
   }
   
-  .modal__content #modal-btn {
+  #modal-btn {
     position: absolute;
-    bottom: 15px;
-    left: 50%;
+    bottom: 18px;
+    left: 50px;
     transform: translate(-50%);
     padding: 5px 20px;
     color: #886A30;

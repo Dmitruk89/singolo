@@ -171,7 +171,7 @@ html, body {
 }
 
 .slide-2 .phone_vertical {
-    left: 390px;
+    left: 280px;
     top: 2px;
     transform: scale(1.065);
 }
@@ -552,6 +552,7 @@ textarea::-webkit-input-placeholder {
 #description {
     display: block;
     width: 100%;
+    height: 200px;
     background-color: #d6564f;
     border: none;
     border-radius: 5px;
@@ -707,4 +708,138 @@ textarea::-webkit-input-placeholder {
     cursor: pointer;
     opacity: 0.7;
     transition: 0.2s;
+}
+
+
+@media screen and (max-width: 1019px) {
+    .slider {
+        height: 450px;
+    }
+
+    .arrow_right {
+        right: 15px;
+    }
+
+    .arrow_left {
+        left: 15px
+    }
+
+    .slide-2 {
+        background-position: center;
+        background-size: contain;
+    }
+    .slide-2 .phone {
+        display: none;
+    }
+
+    .phones {
+        transform: scale(0.75);
+    }
+
+    .services {
+        padding-top: 40px;
+        padding-right: 35px;
+        padding-bottom: 20px;
+    }
+
+    .services__layout-3-column {
+
+        margin-top: 35px;
+    }
+    .services__item {
+        width: 46%;
+        margin-bottom: 50px;
+        margin-right: 20px;
+    }
+
+    .block__description {
+        letter-spacing: 0.3px;
+    }
+
+    .portfolio__gallery {
+        margin-top: 30px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .gallery__item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallery__item {
+        height: 100%;
+        width: 100%;
+    }
+
+    .about-us {
+        padding-top: 53px;
+    }
+
+    .layout-3-column {
+        margin-top: 38px;
+    }
+
+    .employee-card {
+        width: 31%;
+        margin-right: 15px;
+    }
+
+    .emploee__photo {
+        width: 100%;
+    }
+
+    .emploee__name {
+        margin-top: 10px;
+    }
+
+    .emploee__text {
+        margin-top: 0;
+        text-align: justify;
+        letter-spacing: 0;
+    }
+
+    .emploee__social {
+        margin-top: 13px;
+    }
+
+    .get-a-quote {
+        padding-top: 55px;
+    }
+
+    .get-a-quote__form {
+        margin-top: 25px;
+        padding-right: 30px;
+    }
+
+    .get-a-quote__form input {
+        margin-bottom: 12px;
+    }
+
+    #description {
+        height: 160px;
+    }
+
+    #send {
+        width: 31%;
+        color: #f48c8f;
+        padding: 10px 50px;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+    .contact-info {
+        flex-basis: 218px;
+        margin-top: 22px;
+    }
+
+    .contact-info__text {
+        margin-top: 1px;
+        margin-bottom: 10px;
+    }
+
+
 }

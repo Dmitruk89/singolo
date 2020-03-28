@@ -163,6 +163,7 @@ html, body {
 
 .slide-1 {
     align-items: center;
+    justify-content: center;
 }
 
 .slide-2 {
@@ -757,13 +758,16 @@ textarea::-webkit-input-placeholder {
     .block__description {
         letter-spacing: 0.3px;
     }
+    .portfolio {
+        padding-bottom: 66px;
+    }
 
     .portfolio__gallery {
         margin-top: 30px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 20px;
-        grid-row-gap: 20px;
+        grid-row-gap: 17px;
     }
 
     .gallery__item img {
@@ -809,6 +813,7 @@ textarea::-webkit-input-placeholder {
 
     .get-a-quote {
         padding-top: 55px;
+        min-height: 635px;
     }
 
     .get-a-quote__form {
@@ -1071,17 +1076,20 @@ textarea::-webkit-input-placeholder {
 
     .get-a-quote__form input {
         padding-left: 7px;
+        width: 105%;
     }
 
     #description {
         padding-left: 7px;
         margin-bottom: 13px;
+        width: 105%;
     }
 
     #send {
         width: 100%;
         margin-bottom: 7px;
         padding: 17px 50px;
+        width: 105%;
     }
 
     .contact-info__text {
@@ -1104,6 +1112,10 @@ textarea::-webkit-input-placeholder {
     .footer__social {
         margin-right: -9px;
         justify-content: center;
+    }
+
+    .footer .social__item:first-child {
+        margin-left: 18px;
     }
 
     .modal__content {

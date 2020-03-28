@@ -561,6 +561,7 @@ textarea::-webkit-input-placeholder {
     margin-bottom: 16px;
     padding: 10px 12px 10px 15px;
     resize: none;
+    font: inherit;
 }
 
 #send {

@@ -1,5 +1,17 @@
 // navigation
 
+let burgerButton = document.querySelector(".hamburger");
+let navigation = document.querySelector(".header__navigation");
+let logo = document.querySelector(".header__logo");
+
+burgerButton.addEventListener('click', showNavigation);
+
+function showNavigation(event){
+    burgerButton.classList.toggle('hamburger_active');
+    navigation.classList.toggle('navigation_visible');
+    logo.classList.toggle('logo_visible');
+} 
+
 document.addEventListener('scroll', activeOnScroll);
 
 function activeOnScroll(event){

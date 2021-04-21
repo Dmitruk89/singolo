@@ -1,9 +1,4 @@
 # singolo
 
-part1: https://dmitruk89.github.io/singolo/singolo1.html
-
-part2: https://dmitruk89.github.io/singolo/singolo2.html
-
-part3: https://dmitruk89.github.io/singolo/singolo3.html
-
-all: https://dmitruk89.github.io/singolo/
+Another study task at Rolling Scopes school, an example of landing page using HTML, CSS and vanilla javascript.  
+the complete demo of that task by the link: https://dmitruk89.github.io/singolo/
